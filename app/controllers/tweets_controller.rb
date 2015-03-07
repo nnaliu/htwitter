@@ -14,4 +14,8 @@ class TweetsController < ApplicationController
 	def tweet_params
 		params.require(:tweet).permit(:content)
 	end
+
+	def index
+		@tweets = Tweet.all
+	end
 end
